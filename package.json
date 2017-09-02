@@ -10,12 +10,15 @@
   },
   "devDependencies": {
     "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.25",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.2.2",
     "jest": "^20.0.4",
     "typescript": "^2.4.2"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.74",
+    "lodash": "^4.17.4",
     "puppeteer": "^0.10.1"
   }
 }

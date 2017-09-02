@@ -1,0 +1,63 @@
+{
+    "launch": {
+        "meta": {
+            "summary": "Launch chrome instance"
+        },
+        "args": {
+            "ignoreHTTPSErrors": true,
+            "headless": true,
+            "slowMo": 0
+        }
+    },
+    "newPage": {
+        "meta": {
+            "summary": "Launch new browser tab"
+        },
+        "args": {},
+        "goto": {
+            "meta": {
+                "summary": "Launch Automation practice home page"
+            },
+            "args": {
+                "url": "http://automationpractice.com/index.php",
+                "options": {
+                    "waitUntil": "networkidle"
+                }
+            }
+        },
+        "click": {
+            "meta": {
+                "summary": "Activate search box"
+            },
+            "args": {
+                "selector": "#search_query_top",
+                "options": {
+                    "button": "left",
+                    "clickCount": 1,
+                    "delay": 0
+                }
+            }
+        },
+        "type": {
+            "meta": {
+                "summary": "Type a string into the search box"
+            },
+            "args": {
+                "text": "search",
+                "options": {
+                    "delay": 10
+                }
+            }
+        },
+        "closePage": {
+            "meta": {
+                "summary": "Close the current tab"
+            }
+        }
+    },
+    "closeBrowser": {
+        "meta": {
+            "summary": "Close the browser instance"
+        }
+    }
+}
