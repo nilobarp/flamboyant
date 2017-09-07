@@ -1,6 +1,8 @@
 .DS_Store
 node_modules/
 dist/
+docs/
+src/flux/
 
 # dotenv environment variables file
 env.[jt]s

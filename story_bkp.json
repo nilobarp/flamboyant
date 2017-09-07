@@ -16,25 +16,31 @@
         "args": {},
         "goto": {
             "meta": {
-                "summary": "Launch DemoQA registration page"
+                "summary": "Launch Automation practice home page"
             },
             "args": {
-                "url": "http://localhost:8000",
+                "url": "http://automationpractice.com/index.php",
                 "options": {
-                    "waitUntil": "load"
+                    "waitUntil": "networkidle"
                 }
+            }
+        },
+        "screenshot": {
+            "meta": {
+                "summary": "Take a screenshot of the home page"
             },
-            "assert": [
-                {"test": "Page URL", "target": "page.url", "op": "equal", "expect": "http://localhost:8000/"},
-                {"test": "Title content", "target": "page.evaluate", "args": {"selector": "body > div > h1"}, "op": "equal", "expect": "Test App"}
-            ]
+            "args": {
+                "path": "example.png",
+                "type": "png",
+                "fullpage": true
+            }
         },
         "click": {
             "meta": {
-                "summary": "Activate first name field"
+                "summary": "Activate search box"
             },
             "args": {
-                "selector": "#test-input",
+                "selector": "#search_query_top",
                 "options": {
                     "button": "left",
                     "clickCount": 1,
@@ -44,12 +50,12 @@
         },
         "type": {
             "meta": {
-                "summary": "Type into first name field"
+                "summary": "Type a string into the search box"
             },
             "args": {
-                "text": "flamboyant",
+                "text": "search",
                 "options": {
-                    "delay": 0
+                    "delay": 10
                 }
             }
         },
@@ -61,7 +67,7 @@
     },
     "closeBrowser": {
         "meta": {
-            "summary": "Close the browser instance"
+            "summary": "Close the broser instance"
         }
     }
 }
